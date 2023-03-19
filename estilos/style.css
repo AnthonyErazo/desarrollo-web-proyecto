@@ -18,6 +18,9 @@ body{
     background: #656565;
     border: 2px solid #111;
 }
+main{
+    margin-top: 80px;
+}
 
 
 
