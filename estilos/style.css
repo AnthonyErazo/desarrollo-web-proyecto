@@ -1,683 +1,691 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-
-html{
-    scroll-behavior: smooth;
-}
-body{
-    background-image: url(../imagenes/fondo.png);
+html {
+  scroll-behavior: smooth;
 }
 
-.navbar{
-    background-color: rgba(255,255,255,0.13);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-}
-.dropdown-item:hover{
-    background: #656565;
-    border: 2px solid #111;
-}
-main{
-    margin-top: 80px;
+body {
+  background-image: url(../imagenes/fondo.png);
 }
 
-
-
-.main h1{
-    color: #6D106A;
-    text-align: center;
-    margin: 50px;
-    font-size: 80px;
-    font-weight: 800;
+.notAvailed {
+  opacity: 0.5;
 }
-.mainBox img{
-    width: 500px;
+.notAvailed .notAvailed a {
+  cursor: default;
 }
-.mainBox .text{
-    width: 600px;
-    margin: auto;
-}
-.mainBox .text h2{
-    color: #6D106A;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 400;
-}
-.mainBox .text h2 span{
-    font-size: 40px;
-    font-weight: 800;
-}
-.mainBox .text p{
-    color: #fff;
-    font-size: 18px;
-    font-weight: 300;
-}
-.mainBox .text p span{
-    font-size: 28px;
-    font-weight: 800;
+.notAvailed .notAvailed a:hover {
+  background: none;
+  color: #6D106A;
 }
 
-
-
-.cursos h2{
-    cursor: default;
-    font-size: 50px;
-    font-weight: 800;
-    text-align: center;
-    color: #6D106A;
-    border-top: 3px solid #6D106A;
-    border-bottom: 3px solid #6D106A;
+.navbar {
+  background-color: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
 }
-.card{
-    width: 300px;
+
+.dropdown-item:hover {
+  background: #656565;
+  border: 2px solid #111;
+}
+
+main {
+  margin-top: 80px;
+}
+main h1 {
+  color: #6D106A;
+  text-align: center;
+  margin: 50px;
+  font-size: 80px;
+  font-weight: 800;
+}
+
+.mainBox img {
+  width: 500px;
+}
+.mainBox .text {
+  width: 600px;
+  margin: auto;
+}
+.mainBox .text h2 {
+  color: #6D106A;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+}
+.mainBox .text h2 span {
+  font-size: 40px;
+  font-weight: 800;
+}
+.mainBox .text p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+}
+.mainBox .text p span {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.cursos h2 {
+  cursor: default;
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  color: #6D106A;
+  border-top: 3px solid #6D106A;
+  border-bottom: 3px solid #6D106A;
+}
+.cursos .card {
+  width: 300px;
+  margin: 20px;
+  border-radius: 20px;
+  background: #111;
+  cursor: default;
+  overflow: hidden;
+  border: 2px solid #fff;
+}
+.cursos .card a img {
+  width: 100%;
+  height: 140px;
+}
+.cursos .card .cardContenido {
+  padding: 15px;
+  text-align: center;
+}
+.cursos .card .cardContenido h3 {
+  color: #6D106A;
+  margin-top: 0;
+}
+.cursos .card .cardContenido p {
+  width: auto;
+  padding: auto;
+  line-height: 1.5;
+  color: #fff;
+}
+.cursos .card .cardContenido a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  color: #6D106A;
+  border: 1px solid #6D106A;
+  border-radius: 10px;
+}
+.cursos .card .cardContenido a:hover {
+  color: #111;
+  background: #6D106A;
+}
+
+.teacherHeader {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.teacherHeader .text {
+  width: 800px;
+}
+.teacherHeader .text h1 {
+  color: #6D106A;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 800;
+}
+.teacherHeader .text p {
+  font-size: 16px;
+  color: #fff;
+}
+.teacherHeader .text article {
+  text-align: center;
+  margin-top: 50px;
+  font-style: italic;
+  font-weight: 600;
+}
+.teacherHeader img {
+  width: 350px;
+}
+
+.teacherContainer {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.teacherContainer .teacherCard {
+  width: 450px;
+  margin: 20px;
+  cursor: default;
+  display: flex;
+}
+.teacherContainer .teacherCard img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 10rem;
+  width: 10rem;
+}
+.teacherContainer .teacherCard .teacherInfo {
+  margin: 15px;
+  width: auto;
+  align-self: center;
+}
+.teacherContainer .teacherCard .teacherInfo p:nth-child(1) {
+  color: #6D106A;
+  line-height: 10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+.teacherContainer .teacherCard .teacherInfo p:nth-child(2) {
+  color: #656565;
+  line-height: 0px;
+  font-size: 15px;
+  font-weight: 800;
+}
+.teacherContainer .teacherCard .teacherInfo p:nth-child(3) {
+  color: #fff;
+  font-size: 15px;
+}
+
+.presentacionCurso {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 400px 400px 220px;
+  grid-template-rows: 500px auto auto;
+  gap: 10px;
+}
+.presentacionCurso .presentacion {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  text-align: center;
+  overflow: hidden;
+}
+.presentacionCurso .presentacion h1 {
+  text-align: start;
+  color: #6D106A;
+  font-size: 40px;
+  font-weight: 600;
+  border-bottom: 2px solid #fff;
+}
+.presentacionCurso .presentacion img {
+  width: 100%;
+}
+.presentacionCurso .info {
+  margin: auto;
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.presentacionCurso .info h2 {
+  cursor: default;
+  color: #6D106A;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+.presentacionCurso .info p {
+  color: #fff;
+  font-size: 18px;
+}
+.presentacionCurso .info ul li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+}
+.presentacionCurso .info ul li span {
+  color: #fff;
+  font-size: 20px;
+}
+.presentacionCurso .info ul li p {
+  color: #fff;
+}
+.presentacionCurso .requisitos {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.presentacionCurso .requisitos h2 {
+  color: #6D106A;
+  font-size: 30px;
+  font-weight: 600;
+}
+.presentacionCurso .requisitos ul li {
+  color: #fff;
+}
+.presentacionCurso .objetivo {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.presentacionCurso .objetivo h2 {
+  color: #6D106A;
+  font-size: 30px;
+  font-weight: 600;
+}
+.presentacionCurso .objetivo ul li {
+  color: #fff;
+}
+.presentacionCurso .temario {
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+.presentacionCurso .temario h2 {
+  color: #6D106A;
+  font-size: 30px;
+  font-weight: 600;
+}
+.presentacionCurso .temario ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 5px;
+  color: #fff;
+}
+.presentacionCurso .temario ul li {
+  color: #fff;
+}
+.presentacionCurso .temario ul li ul {
+  display: block;
+}
+.presentacionCurso .masCursos {
+  grid-column: 3/4;
+  grid-row: 2/4;
+}
+.presentacionCurso .masCursos h2 {
+  cursor: default;
+  color: #6D106A;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+.presentacionCurso .masCursos .contenedor .miniCard {
+  display: flex;
+  border-bottom: 1px solid #fff;
+  margin: 15px 0 15px 0;
+  width: 240px;
+}
+.presentacionCurso .masCursos .contenedor .miniCard a .imgMini {
+  width: 135px;
+}
+.presentacionCurso .masCursos .contenedor .miniCard p {
+  color: #fff;
+}
+.presentacionCurso .masCursos .contenedor .miniCard p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.opiniones h2 {
+  cursor: default;
+  color: #6D106A;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+.opiniones .cajaContenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.opiniones .cajaContenedor .caja {
+  background: #111;
+  margin: 1rem;
+  padding: 1rem;
+  border: 0.1rem solid #fff;
+  width: 500px;
+  height: 250px;
+  border-radius: 0.5rem;
+  display: flex;
+}
+.opiniones .cajaContenedor .caja .user {
+  text-align: center;
+}
+.opiniones .cajaContenedor .caja .user img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 6rem;
+  width: 6rem;
+  margin-top: 2rem;
+}
+.opiniones .cajaContenedor .caja .user h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 200;
+}
+.opiniones .cajaContenedor .caja .comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.opiniones .cajaContenedor .caja .comments p {
+  color: #fff;
+  font-size: 18px;
+  padding: 1rem;
+}
+
+footer .sec h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #6D106A;
+  border-bottom: 1px solid #fff;
+  text-transform: uppercase;
+  cursor: default;
+}
+footer .sec .content {
+  margin-top: 20px;
+}
+footer .abouts .content p {
+  text-align: justify;
+  cursor: default;
+}
+footer .abouts .content .social {
+  margin-top: 20px;
+}
+footer .abouts .content .social a span {
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  color: #fff;
+}
+footer .abouts .content .social a span:hover {
+  background: #656565;
+}
+footer .quicklinks .content li {
+  list-style: none;
+}
+footer .quicklinks .content li a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+footer .quicklinks .content li a:hover {
+  color: #6D106A;
+}
+footer .location .content ul li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 16px;
+}
+footer .location .content ul li span {
+  cursor: default;
+}
+footer .location .content ul li span .fa {
+  font-size: 20px;
+}
+footer .location .content ul li p a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .location .content ul li p a:hover {
+  color: #6D106A;
+}
+footer .contact .content form .text {
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+  cursor: default;
+}
+footer .contact .content form .email input {
+  height: 35px;
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+  color: #fff;
+}
+footer .contact .content form .msg {
+  margin-top: 10px;
+}
+footer .contact .content form .msg textarea {
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+  color: #fff;
+}
+footer .contact .content form .botn {
+  margin-top: 10px;
+}
+footer .contact .content form .botn button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #111;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+}
+footer .bottom {
+  padding: 5px;
+  font-size: 15px;
+  background: #151515;
+  color: #656565;
+  text-align: center;
+  cursor: default;
+}
+
+@media (max-width: 1090px) {
+  .mainBox .text {
     margin: 20px;
-    border-radius: 20px;
-    background: #111;
-    cursor: default;
-    overflow: hidden;
-    border: 2px solid #fff;
-}
-.card h3{
-    color: #6D106A;
-    margin-top: 0;
-}
-.card img{
-    width: 100%;
-    height: 140px;
-}
-.cardContenido{
-    padding: 15px;
-    text-align:  center;
-}
-.cardContenido p{
-    width: auto;
-    padding: auto;
-    line-height: 1.5;
-    color: #fff;
-}
-.cardContenido a{
-    text-decoration: none;
-    display: inline-block;
-    padding: 10px;
-    color: #6D106A;
-    border: 1px solid #6D106A;
-    border-radius: 10px;
-}
-.cardContenido a:hover{
-    color: #111;
-    background: #6D106A;
-}
-
-
-
-
-
-.presentacionCurso{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 400px 400px 220px;
-    grid-template-rows: 500px auto auto;
-    gap: 10px;
-}
-.presentacion{
+  }
+  .presentacionCurso {
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 500px 340px 340px 450px 400px;
+  }
+  .presentacionCurso .presentacion img {
+    width: 80%;
+  }
+  .presentacionCurso .info {
     grid-column: 1/3;
-    grid-row: 1/2;
-    text-align: center;
-    overflow: hidden;
-}
-.presentacion h1{
+    grid-row: 2/3;
+    margin: 0;
+  }
+  .presentacionCurso .info h2 {
     text-align: start;
-    color: #6D106A;
-    font-size: 40px;
-    font-weight: 600;
-    border-bottom: 2px solid #fff;
-}
-.presentacion img{
-    width: 100%;
-}
-.info{
-    margin: auto;
-    grid-column: 3/4;
-    grid-row: 1/2;
-}
-.info p{
-    color: #fff;
-    font-size: 18px;
-}
-.info ul li{
-    display: grid;
-    grid-template-columns: 30px 1fr;
-}
-.info ul li span{
-    color: #fff;
-    font-size: 20px;
-}
-.info ul li p{
-    color: #fff;
-}
-.requisitos{
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-.requisitos ul,
-.objetivo ul{
-    color: #fff;
-}
-.objetivo h2,
-.temario h2,
-.requisitos h2{
-    color: #6D106A;
-    font-size: 30px;
-    font-weight: 600;
-}
-.objetivo{
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-.temario{
-    grid-column: 1/3;
+  }
+  .presentacionCurso .info ul li {
+    width: 90%;
+    border-bottom: 1px solid #656565;
+  }
+  .presentacionCurso .objetivo,
+  .presentacionCurso .requisitos {
     grid-row: 3/4;
-}
-.temario ul{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    gap: 5px;
-    color: #fff;
-}
-.temario ul li ul{
-    display: block;
-}
-
-
-
-
-
-.masCursos{
-    grid-column: 3/4;
-    grid-row: 2/4;
-}
-.info h2,
-.opiniones h2,
-.masCursos h2{
-    cursor: default;
-    color: #6D106A;
-    font-size: 30px;
-    font-weight: 600;
-    text-align: center;
-}
-.masCursos .miniCard{
+  }
+  .presentacionCurso .temario {
+    grid-row: 4/5;
+  }
+  .presentacionCurso .masCursos {
+    grid-column: 1/3;
+    grid-row: 5/6;
+  }
+  .presentacionCurso .masCursos h2 {
+    text-align: start;
+  }
+  .presentacionCurso .masCursos .contenedor {
     display: flex;
-    border-bottom: 1px solid #fff;
-    margin: 15px 0 15px 0;
-    width: 240px;
-}
-.masCursos .miniCard p a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    font-size: 15px;
-}
-.masCursos .miniCard p{
-    color: #fff;
-}
-.masCursos .miniCard .imgMini{
-    width: 135px;
-}
-
-
-
-.opiniones .cajaContenedor{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 10px;
     flex-wrap: wrap;
+    justify-content: center;
+  }
 }
-.opiniones .cajaContenedor .caja{
-    background: #111;
-    margin: 1rem;
-    padding: 1rem;
-    border: .1rem solid #fff;
-    width: 500px;
-    height: 250px;
-    border-radius: .5rem;
-    display: flex;
-}
-.opiniones .cajaContenedor .caja .user{
-    text-align: center;
-}
-.opiniones .cajaContenedor .caja .user img{
-    border-radius: 50%;
-    object-fit: cover;
-    height: 6rem;
-    width: 6rem;
-    margin-top: 2rem;
-}
-.opiniones .cajaContenedor .caja .user h3{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 200;
-}
-.opiniones .cajaContenedor .caja .comments{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-}
-.opiniones .cajaContenedor .caja .comments p{
-    color: #fff;
+@media (max-width: 991px) {
+  .main h1 {
+    font-size: 60px;
+    font-weight: 700;
+  }
+  .main .mainBox .text h2 {
     font-size: 18px;
-    padding: 1rem;
+  }
+  .main .mainBox .text h2 span {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .main .mainBox .text p {
+    font-size: 15px;
+  }
+  .main .mainBox .text p span {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .teacherHeader .text {
+    width: 50%;
+  }
+  .teacherHeader .text h1 {
+    font-size: 35px;
+    font-weight: 700;
+  }
+  .teacherHeader .text p {
+    font-size: 15px;
+  }
+  .teacherHeader .text article {
+    margin-top: 40px;
+  }
+  .teacherHeader img {
+    width: 40%;
+  }
 }
-
-
-.teacherHeader{
+@media (max-width: 900px) {
+  .mainBox img {
+    width: 50%;
+  }
+  .presentacionCurso {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    gap: 0;
+    margin: 80px 10px 0 10px;
+  }
+  .presentacionCurso .presentacion img {
+    width: 100%;
+  }
+  .presentacionCurso .info {
+    grid-column: 1/2;
+  }
+  .presentacionCurso .requisitos {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .presentacionCurso .objetivo {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .presentacionCurso .temario {
+    grid-row: 5/6;
+  }
+  .presentacionCurso .temario ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .presentacionCurso .masCursos {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+}
+@media (max-width: 768px) {
+  .presentacionCurso .presentacion h1 {
+    font-size: 25px;
+  }
+  .presentacionCurso .info h2 {
+    font-size: 25px;
+  }
+  .presentacionCurso .info p {
+    font-size: 15px;
+  }
+  .presentacionCurso .requisitos {
+    font-size: 15px;
+  }
+  .presentacionCurso .requisitos h2 {
+    font-size: 25px;
+  }
+  .presentacionCurso .objetivo {
+    font-size: 15px;
+  }
+  .presentacionCurso .objetivo h2 {
+    font-size: 25px;
+  }
+  .presentacionCurso .temario {
+    font-size: 15px;
+  }
+  .presentacionCurso .temario h2 {
+    font-size: 25px;
+  }
+  .presentacionCurso .masCursos h2 {
+    font-size: 25px;
+  }
+  .opiniones h2 {
+    font-size: 25px;
+  }
+  .teacherHeader {
     margin: auto;
     width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.teacherHeader img{
-    width: 350px;
-}
-.teacherHeader .text{
-    width: 800px;
-}
-.teacherHeader .text h1{
-    color: #6D106A;
-    text-align: center;
-    font-size: 45px;
-    font-weight: 800;
-}
-.teacherHeader .text p{
-    font-size: 16px;
-    color: #fff;
-}
-.teacherHeader .text article{
-    text-align: center;
-    margin-top: 50px;
-    font-style: italic;
+    flex-direction: column-reverse;
+  }
+  .teacherHeader .text {
+    width: 90%;
+  }
+  .teacherHeader .text h1 {
+    font-size: 30px;
     font-weight: 600;
+  }
+  .teacherHeader .text p {
+    font-size: 14px;
+  }
+  .teacherHeader img {
+    width: 50%;
+  }
 }
-
-
-.teacherContainer{
-    padding-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
+@media (max-width: 550px) {
+  .main h1 {
+    font-size: 38px;
+  }
+  .main .mainBox .text {
+    width: 90%;
+  }
+  .presentacionCurso .temario ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .opiniones .cajaContenedor .caja {
+    flex-direction: column;
     justify-content: center;
-}
-.teacherCard{
-    width: 450px;
-    margin: 20px;
-    cursor: default;
-    display: flex;
-}
-.teacherCard img{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .teacherHeader img {
+    width: 60%;
+  }
+  .teacherContainer .teacherCard {
+    display: inline-block;
+    text-align: center;
+  }
+  .teacherContainer .teacherCard img {
     border-radius: 50%;
     object-fit: cover;
-    height: 10rem;
-    width: 10rem;
-}
-.teacherCard .teacherInfo{
-    margin: 15px;
-    width: auto;
-    align-self: center;
-}
-.teacherCard .teacherInfo p:nth-child(1){
-    color: #6D106A;
-    line-height: 10px;
-    font-size: 20px;
-    font-weight: 800;
-}
-.teacherCard .teacherInfo p:nth-child(2){
-    color: #656565;
-    line-height: 0px;
-    font-size: 15px;
-    font-weight: 800;
-}
-.teacherCard .teacherInfo p:nth-child(3){
-    color: #fff;
-    font-size: 15px;
-}
-
-
-
-.notAvailed{
-    opacity: 0.5;
-}
-.notAvailed a{
-    cursor: default;
-}
-.notAvailed a:hover{
-    background: none;
-    color: #6D106A;
-}
-
-
-.sec h2{
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #6D106A;
-    border-bottom: 1px solid #fff;
-    text-transform: uppercase;
-    cursor: default;
-}
-.sec .content{
-    margin-top: 20px;
-}
-.abouts .content p{
-    text-align: justify;
-    cursor: default;
-}
-.abouts .content .social{
-    margin-top: 20px;
-}
-.abouts .content .social a span{
-    height: 40px;
-    width: 40px;
-    background: #1a1a1a;
-    line-height: 40px;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 5px;
-    color: #fff;
-}
-.abouts .content .social a span:hover{
-    background: #656565;
-}
-.quicklinks .content li{
-    list-style: none;
-}
-.quicklinks .content li a{
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 10px;
-    display: inline-block;
-}
-.location .content ul li{
-    display: grid;
-    grid-template-columns: 30px 1fr;
-    margin-bottom: 16px;
-}
-.location .content .fa{
-    font-size: 20px;
-}
-.location .content span:nth-child(2){
-    cursor: default;
-}
-.location .content a{
-    text-decoration: none;
-    color: #fff;
-}
-.quicklinks .content li a:hover,
-.location .content a:hover{
-    color: #6D106A;
-}
-.contact form .text{
-    font-size: 1.0625rem;
-    margin-bottom: 2px;
-    color: #656565;
-    cursor: default;
-}
-.contact form .msg{
-    margin-top: 10px;
-}
-.contact form input, .contact form textarea{
-    width: 100%;
-    font-size: 1.0625rem;
-    background: #151515;
-    padding-left: 10px;
-    border: 1px solid #222222;
-    color: #fff;
-}
-.contact form input{
-    height: 35px;
-}
-.contact form .botn{
-    margin-top: 10px;
-}
-.contact form .botn button{
-    height: 40px;
-    width: 100%;
-    border: none;
-    outline: none;
-    background: #fff;
-    color: #111;
-    font-size: 15px;
-    font-weight: 650;
-    cursor: pointer;
-}
-.bottom{
-    padding: 5px;
-    font-size: 15px;
-    background: #151515;
-    color: #656565;
-    text-align: center;
-    cursor: default;
-}
-
-
-
-@media(max-width:1090px){
-    .mainBox .text{
-        margin: 20px;
-    }
-
-    .presentacionCurso{
-        grid-template-columns: 45% 45%;
-        grid-template-rows: 500px 340px 340px 450px 400px;
-    }
-    .presentacion img{
-        width: 80%;
-    }
-    .info{
-        grid-column: 1/3;
-        grid-row: 2/3;
-        margin: 0;
-    }
-    .info ul li{
-        width: 90%;
-        border-bottom: 1px solid #656565;
-    }
-    .masCursos h2,
-    .info h2{
-        text-align: start;
-    }
-    .objetivo,
-    .requisitos{
-        grid-row: 3/4;
-    }
-    .temario{
-        grid-row: 4/5;
-    }
-    .masCursos{
-        grid-column: 1/3;
-        grid-row: 5/6;
-    }
-    .masCursos .contenedor{
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-
-@media (max-width:991px){
-
-    .main h1{
-        font-size: 60px;
-        font-weight: 700;
-    }
-    .mainBox .text h2{
-        font-size: 18px;
-    }
-    .mainBox .text h2 span{
-        font-size: 24px;
-        font-weight: 700;
-    }
-    .mainBox .text p{
-        font-size: 15px;
-    }
-    .mainBox .text p span{
-        font-size: 20px;
-        font-weight: 700;
-    }
-
-
-    .teacherHeader img{
-        width: 40%;
-    }
-    .teacherHeader .text{
-        width: 50%;
-    }
-    .teacherHeader .text h1{
-        font-size: 35px;
-        font-weight: 700;
-    }
-    .teacherHeader .text p{
-        font-size: 15px;
-    }
-    .teacherHeader .text article{
-        margin-top: 40px;
-    }
-}
-
-
-@media (max-width:900px){
-    .mainBox img{
-        width: 50%;
-    }
-    
-
-    .presentacionCurso{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, auto);
-        gap: 0;
-        margin: 80px 10px 0 10px;
-    }
-    .presentacion img{
-        width: 100%;
-    }
-    .info{
-        grid-column: 1/2;
-    }
-    .requisitos{
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-    .objetivo{
-        grid-column: 1/2;
-        grid-row: 4/5;
-    }
-    .temario{
-        grid-row: 5/6;
-    }
-    .temario ul{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .masCursos{
-        grid-column: 1/2;
-        grid-row: 6/7;
-    }
-}
-
-
-@media (max-width:768px){
-    .presentacion h1{
-        font-size: 25px;
-    }
-    .requisitos,
-    .temario,
-    .objetivo,
-    .info p{
-        font-size: 15px;
-    }
-    .opiniones h2,
-    .objetivo h2,
-    .temario h2,
-    .requisitos h2,
-    .masCursos h2,
-    .info h2{
-        font-size: 25px;
-    }
-
-    .teacherHeader{
-        margin: auto;
-        width: 90%;
-        flex-direction: column-reverse;
-    }
-    .teacherHeader img{
-        width: 50%;
-    }
-    .teacherHeader .text{
-        width: 90%;
-    }
-    .teacherHeader .text h1{
-        font-size: 30px;
-        font-weight: 600;
-    }
-    .teacherHeader .text p{
-        font-size: 14px;
-    }
-}
-
-
-@media(max-width:550px){
-
-    .main h1{
-        font-size: 38px;
-    }
-    .mainBox .text{
-        width: 90%;
-    }
-
-
-    .temario ul{
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-
-    .opiniones .cajaContenedor .caja{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-    }
-
-    .teacherHeader img{
-        width: 60%;
-    }
-
-    
-    .teacherCard{
-        display: inline-block;
-        text-align: center;
-    }
-    .teacherCard img{
-        border-radius: 50%;
-        object-fit: cover;
-        height: 8rem;
-        width: 8rem;
-    }
-    .teacherCard .teacherInfo p:nth-child(1){
-        line-height: 20px;
-        font-size: 16px;
-        font-weight: 500;
-    }
-    .teacherCard .teacherInfo p:nth-child(2){
-        font-size: 14px;
-        font-weight: 100;
-    }
-    .teacherCard .teacherInfo p:nth-child(3){
-        font-size: 13px;
-    }
-}
+    height: 8rem;
+    width: 8rem;
+  }
+  .teacherContainer .teacherCard .teacherinfo p:nth-child(1) {
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .teacherContainer .teacherCard .teacherinfo p:nth-child(2) {
+    font-size: 14px;
+    font-weight: 100;
+  }
+  .teacherContainer .teacherCard .teacherinfo p:nth-child(3) {
+    font-size: 13px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,328 @@
+@media(max-width:1090px) {
+    .mainBox .text {
+        margin: 20px;
+    }
+
+    .presentacionCurso {
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 500px 340px 340px 450px 400px;
+
+        .presentacion {
+            img {
+                width: 80%;
+            }
+        }
+
+        .info {
+            grid-column: 1/3;
+            grid-row: 2/3;
+            margin: 0;
+
+            h2 {
+                text-align: start;
+            }
+
+            ul {
+                li {
+                    width: 90%;
+                    border-bottom: 1px solid #656565;
+                }
+            }
+        }
+
+        .objetivo,
+        .requisitos {
+            grid-row: 3/4;
+        }
+
+        .temario {
+            grid-row: 4/5;
+        }
+
+        .masCursos {
+            grid-column: 1/3;
+            grid-row: 5/6;
+
+            h2 {
+                text-align: start;
+            }
+
+            .contenedor {
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+@media (max-width:991px) {
+    .main {
+        h1 {
+            font-size: 60px;
+            font-weight: 700;
+        }
+
+        .mainBox {
+            .text {
+                h2 {
+                    font-size: 18px;
+
+                    span {
+                        font-size: 24px;
+                        font-weight: 700;
+                    }
+                }
+
+                p {
+                    font-size: 15px;
+
+                    span {
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .teacherHeader {
+        .text {
+            width: 50%;
+
+            h1 {
+                font-size: 35px;
+                font-weight: 700;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            article {
+                margin-top: 40px;
+            }
+        }
+
+        img {
+            width: 40%;
+        }
+    }
+
+}
+
+
+@media (max-width:900px) {
+    .mainBox {
+        img {
+            width: 50%;
+        }
+
+    }
+
+
+    .presentacionCurso {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        gap: 0;
+        margin: 80px 10px 0 10px;
+
+        .presentacion {
+            img {
+                width: 100%;
+            }
+        }
+
+        .info {
+            grid-column: 1/2;
+        }
+
+        .requisitos {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+
+        .objetivo {
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+
+        .temario {
+            grid-row: 5/6;
+
+            ul {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .masCursos {
+            grid-column: 1/2;
+            grid-row: 6/7;
+        }
+    }
+
+
+}
+
+
+@media (max-width:768px) {
+    .presentacionCurso {
+        .presentacion {
+            h1 {
+                font-size: 25px;
+            }
+        }
+
+        .info {
+            h2 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+        .requisitos {
+            font-size: 15px;
+
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        .objetivo {
+            font-size: 15px;
+
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        .temario {
+            font-size: 15px;
+
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        .masCursos {
+            h2 {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .opiniones {
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+
+
+
+    .teacherHeader {
+        margin: auto;
+        width: 90%;
+        flex-direction: column-reverse;
+
+        .text {
+            width: 90%;
+
+            h1 {
+                font-size: 30px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        img {
+            width: 50%;
+        }
+    }
+
+}
+
+
+@media(max-width:550px) {
+
+    .main {
+        h1 {
+            font-size: 38px;
+        }
+
+        .mainBox {
+            .text {
+                width: 90%;
+            }
+        }
+    }
+
+
+    .presentacionCurso {
+        .temario {
+            ul {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+
+    .opiniones {
+        .cajaContenedor {
+            .caja {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .teacherHeader {
+        img {
+            width: 60%;
+        }
+    }
+
+    .teacherContainer {
+        .teacherCard {
+            display: inline-block;
+            text-align: center;
+
+            img {
+                border-radius: 50%;
+                object-fit: cover;
+                height: 8rem;
+                width: 8rem;
+            }
+
+            .teacherinfo {
+                p {
+                    &:nth-child(1) {
+                        line-height: 20px;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+
+                    &:nth-child(2) {
+                        font-size: 14px;
+                        font-weight: 100;
+                    }
+
+                    &:nth-child(3) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}

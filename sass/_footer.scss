@@ -1,0 +1,161 @@
+footer {
+    .sec {
+        h2 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #6D106A;
+            border-bottom: 1px solid #fff;
+            text-transform: uppercase;
+            cursor: default;
+        }
+
+        .content {
+            margin-top: 20px;
+        }
+    }
+
+    .abouts {
+        .content {
+            p {
+                text-align: justify;
+                cursor: default;
+            }
+
+            .social {
+                margin-top: 20px;
+
+                a {
+                    span {
+                        height: 40px;
+                        width: 40px;
+                        background: #1a1a1a;
+                        line-height: 40px;
+                        text-align: center;
+                        font-size: 18px;
+                        border-radius: 5px;
+                        color: #fff;
+
+                        &:hover {
+                            background: #656565;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .quicklinks {
+        .content {
+            li {
+                list-style: none;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    margin-bottom: 10px;
+                    display: inline-block;
+
+                    &:hover {
+                        color: #6D106A;
+                    }
+                }
+            }
+        }
+    }
+
+    .location {
+        .content {
+            ul {
+                li {
+                    display: grid;
+                    grid-template-columns: 30px 1fr;
+                    margin-bottom: 16px;
+
+                    span {
+                        cursor: default;
+
+                        .fa {
+                            font-size: 20px;
+                        }
+                    }
+
+                    p {
+                        a {
+                            text-decoration: none;
+                            color: #fff;
+
+                            &:hover {
+                                color: #6D106A;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+        .content {
+            form {
+                .text {
+                    font-size: 1.0625rem;
+                    margin-bottom: 2px;
+                    color: #656565;
+                    cursor: default;
+                }
+
+                .email {
+                    input {
+                        height: 35px;
+                        width: 100%;
+                        font-size: 1.0625rem;
+                        background: #151515;
+                        padding-left: 10px;
+                        border: 1px solid #222222;
+                        color: #fff;
+                    }
+                }
+
+                .msg {
+                    margin-top: 10px;
+
+                    textarea {
+                        width: 100%;
+                        font-size: 1.0625rem;
+                        background: #151515;
+                        padding-left: 10px;
+                        border: 1px solid #222222;
+                        color: #fff;
+                    }
+                }
+
+                .botn {
+                    margin-top: 10px;
+
+                    button {
+                        height: 40px;
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        background: #fff;
+                        color: #111;
+                        font-size: 15px;
+                        font-weight: 650;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .bottom {
+        padding: 5px;
+        font-size: 15px;
+        background: #151515;
+        color: #656565;
+        text-align: center;
+        cursor: default;
+    }
+}

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../imagenes/fondo.png);
+}
+
+.notAvailed {
+    opacity: 0.5;
+
+    .notAvailed a {
+        cursor: default;
+
+        &:hover {
+            background: none;
+            color: #6D106A;
+        }
+    }
+}

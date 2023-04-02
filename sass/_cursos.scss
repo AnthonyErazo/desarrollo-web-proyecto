@@ -1,0 +1,221 @@
+.presentacionCurso {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 400px 400px 220px;
+    grid-template-rows: 500px auto auto;
+    gap: 10px;
+
+    .presentacion {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        text-align: center;
+        overflow: hidden;
+
+        h1 {
+            text-align: start;
+            color: #6D106A;
+            font-size: 40px;
+            font-weight: 600;
+            border-bottom: 2px solid #fff;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .info {
+        margin: auto;
+        grid-column: 3/4;
+        grid-row: 1/2;
+
+        h2 {
+            cursor: default;
+            color: #6D106A;
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        p {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        ul {
+            li {
+                display: grid;
+                grid-template-columns: 30px 1fr;
+
+                span {
+                    color: #fff;
+                    font-size: 20px;
+                }
+
+                p {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .requisitos {
+        grid-column: 1/2;
+        grid-row: 2/3;
+
+        h2 {
+            color: #6D106A;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        ul {
+            li {
+                color: #fff;
+            }
+        }
+    }
+
+
+    .objetivo {
+        grid-column: 2/3;
+        grid-row: 2/3;
+
+        h2 {
+            color: #6D106A;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        ul {
+            li {
+                color: #fff;
+            }
+        }
+    }
+
+    .temario {
+        grid-column: 1/3;
+        grid-row: 3/4;
+
+        h2 {
+            color: #6D106A;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: auto;
+            gap: 5px;
+            color: #fff;
+
+            li {
+                color: #fff;
+
+                ul {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .masCursos {
+        grid-column: 3/4;
+        grid-row: 2/4;
+
+        h2 {
+            cursor: default;
+            color: #6D106A;
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .contenedor {
+            .miniCard {
+                display: flex;
+                border-bottom: 1px solid #fff;
+                margin: 15px 0 15px 0;
+                width: 240px;
+
+                a {
+                    .imgMini {
+                        width: 135px;
+                    }
+                }
+
+                p {
+                    color: #fff;
+
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-weight: 600;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.opiniones {
+    h2 {
+        cursor: default;
+        color: #6D106A;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .cajaContenedor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .caja {
+            background: #111;
+            margin: 1rem;
+            padding: 1rem;
+            border: .1rem solid #fff;
+            width: 500px;
+            height: 250px;
+            border-radius: .5rem;
+            display: flex;
+
+            .user {
+                text-align: center;
+
+                img {
+                    border-radius: 50%;
+                    object-fit: cover;
+                    height: 6rem;
+                    width: 6rem;
+                    margin-top: 2rem;
+                }
+
+                h3 {
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: 200;
+                }
+            }
+
+            .comments {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #fff;
+
+                p {
+                    color: #fff;
+                    font-size: 18px;
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}

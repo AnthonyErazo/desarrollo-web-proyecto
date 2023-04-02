@@ -1,0 +1,87 @@
+.teacherHeader {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .text {
+        width: 800px;
+
+        h1 {
+            color: #6D106A;
+            text-align: center;
+            font-size: 45px;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        article {
+            text-align: center;
+            margin-top: 50px;
+            font-style: italic;
+            font-weight: 600;
+        }
+    }
+
+    img {
+        width: 350px;
+    }
+}
+
+
+
+
+.teacherContainer {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .teacherCard {
+        width: 450px;
+        margin: 20px;
+        cursor: default;
+        display: flex;
+
+        img {
+            border-radius: 50%;
+            object-fit: cover;
+            height: 10rem;
+            width: 10rem;
+        }
+
+        .teacherInfo {
+            margin: 15px;
+            width: auto;
+            align-self: center;
+
+            p {
+                &:nth-child(1) {
+                    color: #6D106A;
+                    line-height: 10px;
+                    font-size: 20px;
+                    font-weight: 800;
+                }
+
+                &:nth-child(2) {
+                    color: #656565;
+                    line-height: 0px;
+                    font-size: 15px;
+                    font-weight: 800;
+                }
+
+                &:nth-child(3) {
+                    color: #fff;
+                    font-size: 15px;
+                }
+
+            }
+        }
+    }
+
+}
