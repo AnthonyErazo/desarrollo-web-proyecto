@@ -1,26 +1,38 @@
 main {
-    margin-top: 80px;
+    margin-top: 100px;
 
     h1 {
-        color: #6D106A;
+        @include titleGradient;
         text-align: center;
         margin: 50px;
         font-size: 80px;
         font-weight: 800;
+        animation: from-front 1.5s ease;
+        animation: elevar 3s linear infinite;
     }
 }
 
 .mainBox {
     img {
         width: 500px;
+        animation: from-left 1s ease;
+
+        &:nth-child(2) {
+            animation: from-rigth 1s ease;
+        }
     }
 
     .text {
         width: 600px;
         margin: auto;
+        animation: from-left 1s ease;
+
+        &:nth-child(2) {
+            animation: from-rigth 1s ease;
+        }
 
         h2 {
-            color: #6D106A;
+            color: $violet;
             text-align: center;
             font-size: 25px;
             font-weight: 400;
@@ -46,61 +58,104 @@ main {
 }
 
 
-
 .cursos {
+    animation: from-top 1s ease;
     h2 {
+        @include titleGradient;
         cursor: default;
         font-size: 50px;
         font-weight: 800;
         text-align: center;
-        color: #6D106A;
-        border-top: 3px solid #6D106A;
-        border-bottom: 3px solid #6D106A;
+        letter-spacing: 15px;
+        animation: gradient 20s linear infinite;
+        animation: elevar 3s linear infinite;
     }
 
-    .card {
-        width: 300px;
-        margin: 20px;
-        border-radius: 20px;
-        background: #111;
-        cursor: default;
+    .cajita {
+        background: $colorGradient;
+        background-repeat: repeat;
+        position: relative;
         overflow: hidden;
-        border: 2px solid #fff;
+        width: 320px;
+        height: 420px;
+        border-radius: 20px;
+        transition: all 400ms ease;
+        box-shadow: 2px 2px 5px rgb(255, 255, 255);
+        
+        animation: gradient 20s linear infinite;
 
-        a {
-            img {
-                width: 100%;
-                height: 140px;
-            }
+
+        &:hover {
+            box-shadow: 5px 5px 15px rgba(255, 255, 255);
+            transform: translateY(-7%);
         }
 
-        .cardContenido {
-            padding: 15px;
-            text-align: center;
+        .card {
+            position: absolute;
+            inset: 3px;
+            padding: 20px 10px 10px;
+            border-radius: 20px;
+            background: #111;
+            cursor: default;
+            overflow: hidden;
 
-            h3 {
-                color: #6D106A;
-                margin-top: 0;
-            }
-
-            p {
-                width: auto;
-                padding: auto;
-                line-height: 1.5;
-                color: #fff;
-            }
 
             a {
-                text-decoration: none;
-                display: inline-block;
-                padding: 10px;
-                color: #6D106A;
-                border: 1px solid #6D106A;
-                border-radius: 10px;
+                img {
+                    width: 100%;
+                    height: 150px;
+                    border-radius: 15px 15px 0px 0px;
+                }
+            }
 
-                &:hover {
-                    color: #111;
-                    background: #6D106A;
+            .cardContenido {
+                padding: 15px;
+                text-align: center;
+
+                h3 {
+                    color: $violet;
+                    margin-top: 0;
+                }
+
+                p {
+                    width: auto;
+                    padding: auto;
+                    line-height: 1.5;
+                    color: #fff;
+                }
+
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 10px;
+                    color: $violet;
+                    border: 1px solid $violet;
+                    border-radius: 10px;
+                    transition: all 1s ease;
+                    z-index: 2;
+                    position: relative;
+                    overflow: hidden;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                        background-color: $violet;
+                        z-index: -1;
+                        transform: translateX(-100%);
+                        transition: all 1s;
+                    }
+
+                    &:hover {
+                        color: #111;
+
+                        &:before {
+                            transform: translateX(0%);
+                        }
+                    }
                 }
             }
         }

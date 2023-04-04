@@ -16,13 +16,6 @@ body {
 .notAvailed {
   opacity: 0.5;
 }
-.notAvailed .notAvailed a {
-  cursor: default;
-}
-.notAvailed .notAvailed a:hover {
-  background: none;
-  color: #6D106A;
-}
 
 .navbar {
   background-color: rgba(255, 255, 255, 0.13);
@@ -36,22 +29,38 @@ body {
 }
 
 main {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 main h1 {
-  color: #6D106A;
+  background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
+  background-color: #6D106A;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   text-align: center;
   margin: 50px;
   font-size: 80px;
   font-weight: 800;
+  animation: from-front 1.5s ease;
+  animation: elevar 3s linear infinite;
 }
 
 .mainBox img {
   width: 500px;
+  animation: from-left 1s ease;
+}
+.mainBox img:nth-child(2) {
+  animation: from-rigth 1s ease;
 }
 .mainBox .text {
   width: 600px;
   margin: auto;
+  animation: from-left 1s ease;
+}
+.mainBox .text:nth-child(2) {
+  animation: from-rigth 1s ease;
 }
 .mainBox .text h2 {
   color: #6D106A;
@@ -73,53 +82,98 @@ main h1 {
   font-weight: 800;
 }
 
+.cursos {
+  animation: from-top 1s ease;
+}
 .cursos h2 {
+  background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
+  background-color: #6D106A;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   cursor: default;
   font-size: 50px;
   font-weight: 800;
   text-align: center;
-  color: #6D106A;
-  border-top: 3px solid #6D106A;
-  border-bottom: 3px solid #6D106A;
+  letter-spacing: 15px;
+  animation: gradient 20s linear infinite;
+  animation: elevar 3s linear infinite;
 }
-.cursos .card {
-  width: 300px;
-  margin: 20px;
+.cursos .cajita {
+  background: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
+  background-repeat: repeat;
+  position: relative;
+  overflow: hidden;
+  width: 320px;
+  height: 420px;
+  border-radius: 20px;
+  transition: all 400ms ease;
+  box-shadow: 2px 2px 5px rgb(255, 255, 255);
+  animation: gradient 20s linear infinite;
+}
+.cursos .cajita:hover {
+  box-shadow: 5px 5px 15px rgb(255, 255, 255);
+  transform: translateY(-7%);
+}
+.cursos .cajita .card {
+  position: absolute;
+  inset: 3px;
+  padding: 20px 10px 10px;
   border-radius: 20px;
   background: #111;
   cursor: default;
   overflow: hidden;
-  border: 2px solid #fff;
 }
-.cursos .card a img {
+.cursos .cajita .card a img {
   width: 100%;
-  height: 140px;
+  height: 150px;
+  border-radius: 15px 15px 0px 0px;
 }
-.cursos .card .cardContenido {
+.cursos .cajita .card .cardContenido {
   padding: 15px;
   text-align: center;
 }
-.cursos .card .cardContenido h3 {
+.cursos .cajita .card .cardContenido h3 {
   color: #6D106A;
   margin-top: 0;
 }
-.cursos .card .cardContenido p {
+.cursos .cajita .card .cardContenido p {
   width: auto;
   padding: auto;
   line-height: 1.5;
   color: #fff;
 }
-.cursos .card .cardContenido a {
+.cursos .cajita .card .cardContenido a {
   text-decoration: none;
   display: inline-block;
   padding: 10px;
   color: #6D106A;
   border: 1px solid #6D106A;
   border-radius: 10px;
+  transition: all 1s ease;
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
 }
-.cursos .card .cardContenido a:hover {
+.cursos .cajita .card .cardContenido a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #6D106A;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.cursos .cajita .card .cardContenido a:hover {
   color: #111;
-  background: #6D106A;
+}
+.cursos .cajita .card .cardContenido a:hover:before {
+  transform: translateX(0%);
 }
 
 .teacherHeader {
@@ -131,9 +185,16 @@ main h1 {
 }
 .teacherHeader .text {
   width: 800px;
+  animation: from-left 1s ease;
 }
 .teacherHeader .text h1 {
-  color: #6D106A;
+  background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
+  background-color: #6D106A;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   text-align: center;
   font-size: 45px;
   font-weight: 800;
@@ -150,6 +211,7 @@ main h1 {
 }
 .teacherHeader img {
   width: 350px;
+  animation: from-rigth 1s ease;
 }
 
 .teacherContainer {
@@ -163,6 +225,7 @@ main h1 {
   margin: 20px;
   cursor: default;
   display: flex;
+  animation: from-top 1s ease;
 }
 .teacherContainer .teacherCard img {
   border-radius: 50%;
@@ -204,13 +267,24 @@ main h1 {
   grid-row: 1/2;
   text-align: center;
   overflow: hidden;
+  animation: from-left 2s ease;
 }
 .presentacionCurso .presentacion h1 {
   text-align: start;
-  color: #6D106A;
   font-size: 40px;
   font-weight: 600;
-  border-bottom: 2px solid #fff;
+  position: relative;
+}
+.presentacionCurso .presentacion h1:after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  border-radius: 10px;
+  width: 4px;
+  height: 100%;
+  background: #6D106A;
+  bottom: 0;
+  left: -10px;
 }
 .presentacionCurso .presentacion img {
   width: 100%;
@@ -219,13 +293,21 @@ main h1 {
   margin: auto;
   grid-column: 3/4;
   grid-row: 1/2;
+  animation: from-rigth 2s ease;
 }
 .presentacionCurso .info h2 {
+  background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
+  background-color: #6D106A;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   cursor: default;
-  color: #6D106A;
   font-size: 30px;
   font-weight: 600;
   text-align: center;
+  animation: gradient 25s linear infinite;
 }
 .presentacionCurso .info p {
   color: #fff;
@@ -245,11 +327,19 @@ main h1 {
 .presentacionCurso .requisitos {
   grid-column: 1/2;
   grid-row: 2/3;
+  animation: from-left 2s ease;
 }
 .presentacionCurso .requisitos h2 {
-  color: #6D106A;
+  background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
+  background-color: #6D106A;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   font-size: 30px;
   font-weight: 600;
+  animation: gradient 20s linear infinite;
 }
 .presentacionCurso .requisitos ul li {
   color: #fff;
@@ -257,11 +347,19 @@ main h1 {
 .presentacionCurso .objetivo {
   grid-column: 2/3;
   grid-row: 2/3;
+  animation: from-left 2s ease;
 }
 .presentacionCurso .objetivo h2 {
-  color: #6D106A;
+  background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
+  background-color: #6D106A;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   font-size: 30px;
   font-weight: 600;
+  animation: gradient 20s linear infinite;
 }
 .presentacionCurso .objetivo ul li {
   color: #fff;
@@ -269,11 +367,19 @@ main h1 {
 .presentacionCurso .temario {
   grid-column: 1/3;
   grid-row: 3/4;
+  animation: from-left 2s ease;
 }
 .presentacionCurso .temario h2 {
-  color: #6D106A;
+  background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
+  background-color: #6D106A;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   font-size: 30px;
   font-weight: 600;
+  animation: gradient 20s linear infinite;
 }
 .presentacionCurso .temario ul {
   display: grid;
@@ -291,10 +397,18 @@ main h1 {
 .presentacionCurso .masCursos {
   grid-column: 3/4;
   grid-row: 2/4;
+  animation: from-rigth 2s ease;
+  animation: gradient 20s linear infinite;
 }
 .presentacionCurso .masCursos h2 {
+  background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
+  background-color: #6D106A;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   cursor: default;
-  color: #6D106A;
   font-size: 30px;
   font-weight: 600;
   text-align: center;
@@ -318,12 +432,22 @@ main h1 {
   font-size: 15px;
 }
 
+.opiniones {
+  animation: from-front 2s ease;
+}
 .opiniones h2 {
+  background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
+  background-color: #6D106A;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   cursor: default;
-  color: #6D106A;
   font-size: 30px;
   font-weight: 600;
   text-align: center;
+  animation: gradient 20s linear infinite;
 }
 .opiniones .cajaContenedor {
   display: flex;
@@ -368,25 +492,54 @@ main h1 {
   padding: 1rem;
 }
 
-footer .sec h2 {
+footer {
+  margin-top: 100px;
+}
+footer .footerContent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 20px;
+}
+footer .footerContent .sec {
+  padding: 10px 20px;
+}
+footer .footerContent .sec h2 {
   font-size: 1.125rem;
   font-weight: 600;
   color: #6D106A;
-  border-bottom: 1px solid #fff;
   text-transform: uppercase;
   cursor: default;
 }
-footer .sec .content {
+footer .footerContent .sec .content {
   margin-top: 20px;
+  position: relative;
 }
-footer .abouts .content p {
+footer .footerContent .sec .content:before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+footer .footerContent .sec .content:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 15%;
+  background: #6D106A;
+  top: -10px;
+}
+footer .footerContent .abouts .content p {
   text-align: justify;
   cursor: default;
 }
-footer .abouts .content .social {
+footer .footerContent .abouts .content .social {
   margin-top: 20px;
 }
-footer .abouts .content .social a span {
+footer .footerContent .abouts .content .social a span {
   height: 40px;
   width: 40px;
   background: #1a1a1a;
@@ -395,47 +548,50 @@ footer .abouts .content .social a span {
   font-size: 18px;
   border-radius: 5px;
   color: #fff;
+  transition: all 1s ease;
 }
-footer .abouts .content .social a span:hover {
-  background: #656565;
+footer .footerContent .abouts .content .social a span:hover {
+  background-color: #656565;
 }
-footer .quicklinks .content li {
+footer .footerContent .quicklinks .content li {
   list-style: none;
 }
-footer .quicklinks .content li a {
+footer .footerContent .quicklinks .content li a {
   color: #fff;
   text-decoration: none;
   margin-bottom: 10px;
   display: inline-block;
+  transition: all 350ms ease;
 }
-footer .quicklinks .content li a:hover {
+footer .footerContent .quicklinks .content li a:hover {
   color: #6D106A;
 }
-footer .location .content ul li {
+footer .footerContent .location .content ul li {
   display: grid;
   grid-template-columns: 30px 1fr;
   margin-bottom: 16px;
 }
-footer .location .content ul li span {
+footer .footerContent .location .content ul li span {
   cursor: default;
 }
-footer .location .content ul li span .fa {
+footer .footerContent .location .content ul li span .fa {
   font-size: 20px;
 }
-footer .location .content ul li p a {
+footer .footerContent .location .content ul li p a {
   text-decoration: none;
   color: #fff;
+  transition: all 350ms ease;
 }
-footer .location .content ul li p a:hover {
+footer .footerContent .location .content ul li p a:hover {
   color: #6D106A;
 }
-footer .contact .content form .text {
+footer .footerContent .contact .content form .text {
   font-size: 1.0625rem;
   margin-bottom: 2px;
   color: #656565;
   cursor: default;
 }
-footer .contact .content form .email input {
+footer .footerContent .contact .content form .email input {
   height: 35px;
   width: 100%;
   font-size: 1.0625rem;
@@ -444,10 +600,10 @@ footer .contact .content form .email input {
   border: 1px solid #222222;
   color: #fff;
 }
-footer .contact .content form .msg {
+footer .footerContent .contact .content form .msg {
   margin-top: 10px;
 }
-footer .contact .content form .msg textarea {
+footer .footerContent .contact .content form .msg textarea {
   width: 100%;
   font-size: 1.0625rem;
   background: #151515;
@@ -455,10 +611,10 @@ footer .contact .content form .msg textarea {
   border: 1px solid #222222;
   color: #fff;
 }
-footer .contact .content form .botn {
+footer .footerContent .contact .content form .botn {
   margin-top: 10px;
 }
-footer .contact .content form .botn button {
+footer .footerContent .contact .content form .botn button {
   height: 40px;
   width: 100%;
   border: none;
@@ -478,6 +634,68 @@ footer .bottom {
   cursor: default;
 }
 
+@keyframes from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes from-rigth {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes from-front {
+  0% {
+    opacity: 0;
+    transform: translateZ(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0px);
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -80rem 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@keyframes elevar {
+  0% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
 @media (max-width: 1090px) {
   .mainBox .text {
     margin: 20px;
@@ -557,10 +775,13 @@ footer .bottom {
   .teacherHeader img {
     width: 40%;
   }
+  footer .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 900px) {
   .mainBox img {
-    width: 50%;
+    width: 55%;
   }
   .presentacionCurso {
     grid-template-columns: 1fr;
@@ -645,10 +866,16 @@ footer .bottom {
   .teacherHeader img {
     width: 50%;
   }
+  footer .footerContent {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media (max-width: 550px) {
+  .cursos .cajita {
+    width: 80%;
+  }
   .main h1 {
-    font-size: 38px;
+    font-size: 30px;
   }
   .main .mainBox .text {
     width: 90%;

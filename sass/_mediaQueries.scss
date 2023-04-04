@@ -112,13 +112,20 @@
         }
     }
 
+    footer {
+        .footerContent {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
 }
 
 
 @media (max-width:900px) {
     .mainBox {
         img {
-            width: 50%;
+            width: 55%;
         }
 
     }
@@ -249,14 +256,24 @@
         }
     }
 
+    footer{
+        .footerContent{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
 }
 
 
 @media(max-width:550px) {
-
+    
+    .cursos{
+        .cajita{
+            width: 80%;
+        }
+    }
     .main {
         h1 {
-            font-size: 38px;
+            font-size: 30px;
         }
 
         .mainBox {

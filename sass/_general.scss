@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
+$colorGradient: linear-gradient(90deg, rgba(178, 143, 230, 1) 2%, rgba(137, 68, 158, 1) 13%, rgba(125, 46, 136, 1) 22%, rgba(109, 16, 106, 1) 38%, rgba(118, 39, 126, 1) 59%, rgba(147, 89, 176, 1) 77%, rgba(178, 143, 230, 1) 90%);
+$violet: #6D106A;
+
 * {
     margin: 0;
     padding: 0;
@@ -17,13 +20,14 @@ body {
 
 .notAvailed {
     opacity: 0.5;
+}
 
-    .notAvailed a {
-        cursor: default;
-
-        &:hover {
-            background: none;
-            color: #6D106A;
-        }
-    }
+@mixin titleGradient {
+    background-image: $colorGradient;
+    background-color: $violet;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
 }

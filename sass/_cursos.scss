@@ -10,13 +10,25 @@
         grid-row: 1/2;
         text-align: center;
         overflow: hidden;
+        animation: from-left 2s ease;
 
         h1 {
             text-align: start;
-            color: #6D106A;
             font-size: 40px;
             font-weight: 600;
-            border-bottom: 2px solid #fff;
+            position: relative;
+
+            &:after {
+                position: absolute;
+                content: '';
+                height: 4px;
+                border-radius: 10px;
+                width: 4px;
+                height: 100%;
+                background: $violet;
+                bottom: 0;
+                left: -10px;
+            }
         }
 
         img {
@@ -28,13 +40,15 @@
         margin: auto;
         grid-column: 3/4;
         grid-row: 1/2;
+        animation: from-rigth 2s ease;
 
         h2 {
+            @include titleGradient;
             cursor: default;
-            color: #6D106A;
             font-size: 30px;
             font-weight: 600;
             text-align: center;
+            animation: gradient 25s linear infinite;
         }
 
         p {
@@ -62,11 +76,13 @@
     .requisitos {
         grid-column: 1/2;
         grid-row: 2/3;
+        animation: from-left 2s ease;
 
         h2 {
-            color: #6D106A;
+            @include titleGradient;
             font-size: 30px;
             font-weight: 600;
+            animation: gradient 20s linear infinite;
         }
 
         ul {
@@ -80,11 +96,13 @@
     .objetivo {
         grid-column: 2/3;
         grid-row: 2/3;
+        animation: from-left 2s ease;
 
         h2 {
-            color: #6D106A;
+            @include titleGradient;
             font-size: 30px;
             font-weight: 600;
+            animation: gradient 20s linear infinite;
         }
 
         ul {
@@ -97,11 +115,13 @@
     .temario {
         grid-column: 1/3;
         grid-row: 3/4;
+        animation: from-left 2s ease;
 
         h2 {
-            color: #6D106A;
+            @include titleGradient;
             font-size: 30px;
             font-weight: 600;
+            animation: gradient 20s linear infinite;
         }
 
         ul {
@@ -124,10 +144,12 @@
     .masCursos {
         grid-column: 3/4;
         grid-row: 2/4;
+        animation: from-rigth 2s ease;
+        animation: gradient 20s linear infinite;
 
         h2 {
+            @include titleGradient;
             cursor: default;
-            color: #6D106A;
             font-size: 30px;
             font-weight: 600;
             text-align: center;
@@ -162,12 +184,15 @@
 }
 
 .opiniones {
+    animation: from-front 2s ease;
+
     h2 {
+        @include titleGradient;
         cursor: default;
-        color: #6D106A;
         font-size: 30px;
         font-weight: 600;
         text-align: center;
+        animation: gradient 20s linear infinite;
     }
 
     .cajaContenedor {
