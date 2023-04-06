@@ -2,13 +2,10 @@ main {
     margin-top: 100px;
 
     h1 {
-        @include titleGradient;
-        text-align: center;
         margin: 50px;
-        font-size: 80px;
-        font-weight: 800;
         animation: from-front 1.5s ease;
-        animation: elevar 3s linear infinite;
+        @include titleGradient;
+        @include textAnimation(80px,800,center,elevar,3s);
     }
 }
 
@@ -32,25 +29,21 @@ main {
         }
 
         h2 {
-            color: $violet;
+            color: $color-violet;
             text-align: center;
-            font-size: 25px;
-            font-weight: 400;
+            @include font(25px,400);
 
             span {
-                font-size: 40px;
-                font-weight: 800;
+                @include font(40px,800);
             }
         }
 
         p {
-            color: #fff;
-            font-size: 18px;
-            font-weight: 300;
+            color: $color-text;
+            @include font(18px,300);
 
             span {
-                font-size: 28px;
-                font-weight: 800;
+                @include font(28px,800);
             }
         }
     }
@@ -62,26 +55,18 @@ main {
     animation: from-top 1s ease;
     h2 {
         @include titleGradient;
-        cursor: default;
-        font-size: 50px;
-        font-weight: 800;
-        text-align: center;
-        letter-spacing: 15px;
-        animation: gradient 20s linear infinite;
-        animation: elevar 3s linear infinite;
+        @include textAnimation(50px,800,center,elevar,3s);
     }
 
-    .cajita {
+    .containerCard {
+        @include size(320px,420px);
         background: $colorGradient;
         background-repeat: repeat;
         position: relative;
         overflow: hidden;
-        width: 320px;
-        height: 420px;
         border-radius: 20px;
         transition: all 400ms ease;
         box-shadow: 2px 2px 5px rgb(255, 255, 255);
-        
         animation: gradient 20s linear infinite;
 
 
@@ -95,15 +80,14 @@ main {
             inset: 3px;
             padding: 20px 10px 10px;
             border-radius: 20px;
-            background: #111;
+            background: $color-black;
             cursor: default;
             overflow: hidden;
 
 
             a {
                 img {
-                    width: 100%;
-                    height: 150px;
+                    @include size(100%,150px);
                     border-radius: 15px 15px 0px 0px;
                 }
             }
@@ -113,7 +97,7 @@ main {
                 text-align: center;
 
                 h3 {
-                    color: $violet;
+                    color: $color-violet;
                     margin-top: 0;
                 }
 
@@ -121,15 +105,15 @@ main {
                     width: auto;
                     padding: auto;
                     line-height: 1.5;
-                    color: #fff;
+                    color: $color-text;
                 }
 
                 a {
                     text-decoration: none;
                     display: inline-block;
                     padding: 10px;
-                    color: $violet;
-                    border: 1px solid $violet;
+                    color: $color-violet;
+                    border: 1px solid $color-violet;
                     border-radius: 10px;
                     transition: all 1s ease;
                     z-index: 2;
@@ -141,16 +125,15 @@ main {
                         position: absolute;
                         left: 0;
                         top: 0;
-                        height: 100%;
-                        width: 100%;
-                        background-color: $violet;
+                        background-color: $color-violet;
                         z-index: -1;
                         transform: translateX(-100%);
                         transition: all 1s;
+                        @include size(100%,100%);
                     }
 
                     &:hover {
-                        color: #111;
+                        color: $color-black;
 
                         &:before {
                             transform: translateX(0%);

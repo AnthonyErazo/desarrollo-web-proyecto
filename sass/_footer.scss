@@ -12,9 +12,8 @@ footer {
             padding: 10px 20px;
 
             h2 {
-                font-size: 1.125rem;
-                font-weight: 600;
-                color: $violet;
+                @include font(1.125rem,600);
+                color: $color-violet;
                 text-transform: uppercase;
                 cursor: default;
 
@@ -29,18 +28,16 @@ footer {
                     position: absolute;
                     content: '';
                     top: -10px;
-                    height: 2px;
-                    width: 100%;
                     background: #1a1a1a;
+                    @include size(100%,2px);
                 }
 
                 &:after {
                     position: absolute;
                     content: '';
-                    height: 2px;
-                    width: 15%;
-                    background: $violet;
+                    background: $color-violet;
                     top: -10px;
+                    @include size(15%,2px);
                 }
             }
         }
@@ -57,14 +54,13 @@ footer {
 
                     a {
                         span {
-                            height: 40px;
-                            width: 40px;
+                            @include size(40px,40px);
                             background: #1a1a1a;
                             line-height: 40px;
                             text-align: center;
                             font-size: 18px;
                             border-radius: 5px;
-                            color: #fff;
+                            color: $color-text;
                             transition: all 1s ease;
                             &:hover{
                                 background-color: #656565;
@@ -83,14 +79,14 @@ footer {
                     list-style: none;
 
                     a {
-                        color: #fff;
+                        color: $color-text;
                         text-decoration: none;
                         margin-bottom: 10px;
                         display: inline-block;
                         transition: all 350ms ease;
 
                         &:hover {
-                            color: $violet;
+                            color: $color-violet;
                         }
                     }
                 }
@@ -116,11 +112,11 @@ footer {
                         p {
                             a {
                                 text-decoration: none;
-                                color: #fff;
+                                color: $color-text;
                                 transition: all 350ms ease;
 
                                 &:hover {
-                                    color: $violet;
+                                    color: $color-violet;
                                 }
                             }
                         }
@@ -141,13 +137,12 @@ footer {
 
                     .email {
                         input {
-                            height: 35px;
-                            width: 100%;
+                            @include size(100%,35px);
                             font-size: 1.0625rem;
                             background: #151515;
                             padding-left: 10px;
                             border: 1px solid #222222;
-                            color: #fff;
+                            color: $color-text;
                         }
                     }
 
@@ -160,7 +155,7 @@ footer {
                             background: #151515;
                             padding-left: 10px;
                             border: 1px solid #222222;
-                            color: #fff;
+                            color: $color-text;
                         }
                     }
 
@@ -168,15 +163,13 @@ footer {
                         margin-top: 10px;
 
                         button {
-                            height: 40px;
-                            width: 100%;
                             border: none;
                             outline: none;
-                            background: #fff;
-                            color: #111;
-                            font-size: 15px;
-                            font-weight: 650;
+                            background: $color-text;
+                            color: $color-black;
                             cursor: pointer;
+                            @include font(15px,650);
+                            @include size(100%,40px);
                         }
                     }
 

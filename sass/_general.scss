@@ -1,7 +1,94 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-
 $colorGradient: linear-gradient(90deg, rgba(178, 143, 230, 1) 2%, rgba(137, 68, 158, 1) 13%, rgba(125, 46, 136, 1) 22%, rgba(109, 16, 106, 1) 38%, rgba(118, 39, 126, 1) 59%, rgba(147, 89, 176, 1) 77%, rgba(178, 143, 230, 1) 90%);
-$violet: #6D106A;
+$color-violet: #6D106A;
+$color-text:#fff;
+$color-black:#111;
+
+@mixin titleGradient {
+    background-image: $colorGradient;
+    background-color: $color-violet;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+@mixin font($size,$weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+@mixin size($width,$height) {
+    width: $width;
+    height: $height;
+}
+@mixin textAnimation($size,$weight,$align,$animation,$time) {
+    @include font($size,$weight);
+    text-align: $align;
+    animation: $animation $time linear infinite;
+    cursor: default;
+}
+
+@keyframes from-top{
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes from-rigth{
+    0%{
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes from-left{
+    0%{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes from-front{
+    0%{
+        opacity: 0;
+        transform: translateZ(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateZ(0px);
+    }
+}
+@keyframes gradient{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: -80rem 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+@keyframes elevar{
+    0%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-0.5rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+}
 
 * {
     margin: 0;
@@ -20,14 +107,4 @@ body {
 
 .notAvailed {
     opacity: 0.5;
-}
-
-@mixin titleGradient {
-    background-image: $colorGradient;
-    background-color: $violet;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
 }
