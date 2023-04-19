@@ -72,6 +72,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   background-image: url(../imagenes/fondo.png);
 }
 
@@ -110,6 +111,9 @@ main h1 {
   cursor: default;
 }
 
+.mainBox {
+  overflow: hidden;
+}
 .mainBox img {
   width: 500px;
   animation: from-left 1s ease;
@@ -132,16 +136,16 @@ main h1 {
   font-weight: 400;
 }
 .mainBox .text h2 span {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 800;
 }
 .mainBox .text p {
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
 }
 .mainBox .text p span {
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 800;
 }
 
@@ -243,6 +247,7 @@ main h1 {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  overflow: hidden;
 }
 .teacherHeader .text {
   width: 800px;
@@ -261,7 +266,7 @@ main h1 {
   text-align: center;
 }
 .teacherHeader .text p {
-  font-size: 16px;
+  font-size: 18px;
   color: #fff;
 }
 .teacherHeader .text article {
@@ -322,6 +327,7 @@ main h1 {
   grid-template-columns: 400px 400px 220px;
   grid-template-rows: 500px auto auto;
   gap: 10px;
+  overflow: hidden;
 }
 .presentacionCurso .presentacion {
   grid-column: 1/3;
@@ -356,6 +362,7 @@ main h1 {
   animation: from-rigth 2s ease;
 }
 .presentacionCurso .info h2 {
+  margin: 10px 0 10px 0;
   background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
   background-color: #6D106A;
   background-clip: text;
@@ -390,6 +397,7 @@ main h1 {
   animation: from-left 2s ease;
 }
 .presentacionCurso .requisitos h2 {
+  margin: 10px 0 10px 0;
   background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
   background-color: #6D106A;
   background-clip: text;
@@ -404,6 +412,8 @@ main h1 {
   cursor: default;
 }
 .presentacionCurso .requisitos ul li {
+  font-size: 18px;
+  margin: 2px 0 2px 0;
   color: #fff;
 }
 .presentacionCurso .objetivo {
@@ -412,6 +422,7 @@ main h1 {
   animation: from-left 2s ease;
 }
 .presentacionCurso .objetivo h2 {
+  margin: 10px 0 10px 0;
   background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
   background-color: #6D106A;
   background-clip: text;
@@ -426,6 +437,8 @@ main h1 {
   cursor: default;
 }
 .presentacionCurso .objetivo ul li {
+  font-size: 18px;
+  margin: 2px 0 2px 0;
   color: #fff;
 }
 .presentacionCurso .temario {
@@ -434,6 +447,7 @@ main h1 {
   animation: from-left 2s ease;
 }
 .presentacionCurso .temario h2 {
+  margin: 10px 0 10px 0;
   background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
   background-color: #6D106A;
   background-clip: text;
@@ -455,6 +469,8 @@ main h1 {
   color: #fff;
 }
 .presentacionCurso .temario ul li {
+  font-size: 18px;
+  margin: 2px 0 2px 0;
   color: #fff;
 }
 .presentacionCurso .temario ul li ul {
@@ -466,6 +482,7 @@ main h1 {
   animation: from-rigth 2s ease;
 }
 .presentacionCurso .masCursos h2 {
+  margin: 10px 0 10px 0;
   background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
   background-color: #6D106A;
   background-clip: text;
@@ -502,6 +519,7 @@ main h1 {
   animation: from-front 2s ease;
 }
 .opiniones h2 {
+  margin: 10px 0 10px 0;
   background-image: linear-gradient(90deg, rgb(178, 143, 230) 2%, rgb(137, 68, 158) 13%, rgb(125, 46, 136) 22%, rgb(109, 16, 106) 38%, rgb(118, 39, 126) 59%, rgb(147, 89, 176) 77%, rgb(178, 143, 230) 90%);
   background-color: #6D106A;
   background-clip: text;
@@ -706,7 +724,7 @@ footer .bottom {
   }
   .presentacionCurso {
     grid-template-columns: 45% 45%;
-    grid-template-rows: 500px 340px 340px 450px 400px;
+    grid-template-rows: 500px 340px 500px 520px 400px;
   }
   .presentacionCurso .presentacion img {
     width: 80%;
@@ -821,6 +839,11 @@ footer .bottom {
     grid-column: 1/2;
     grid-row: 6/7;
   }
+  .presentacionCurso .temario ul li,
+  .presentacionCurso .objetivo ul li,
+  .presentacionCurso .requisitos ul li {
+    font-size: 16px;
+  }
 }
 @media (max-width: 768px) {
   .presentacionCurso .presentacion h1 {
@@ -869,7 +892,7 @@ footer .bottom {
     font-weight: 600;
   }
   .teacherHeader .text p {
-    font-size: 14px;
+    font-size: 16px;
   }
   .teacherHeader img {
     width: 50%;
@@ -879,7 +902,10 @@ footer .bottom {
   }
 }
 @media (max-width: 550px) {
-  .cursos .cajita {
+  .cursos h2 {
+    font-size: 30px;
+  }
+  .cursos .containerCard {
     width: 80%;
   }
   .main h1 {
@@ -887,6 +913,7 @@ footer .bottom {
   }
   .main .mainBox .text {
     width: 90%;
+    font-size: 16px;
   }
   .presentacionCurso .temario ul {
     grid-template-columns: repeat(1, 1fr);

@@ -10,6 +10,7 @@ main {
 }
 
 .mainBox {
+    overflow: hidden;
     img {
         width: 500px;
         animation: from-left 1s ease;
@@ -34,16 +35,16 @@ main {
             @include font(25px,400);
 
             span {
-                @include font(40px,800);
+                @include font(35px,800);
             }
         }
 
         p {
             color: $color-text;
-            @include font(18px,300);
+            @include font(20px,300);
 
             span {
-                @include font(28px,800);
+                @include font(25px,800);
             }
         }
     }

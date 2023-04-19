@@ -5,7 +5,7 @@
 
     .presentacionCurso {
         grid-template-columns: 45% 45%;
-        grid-template-rows: 500px 340px 340px 450px 400px;
+        grid-template-rows: 500px 340px 500px 520px 400px;
 
         .presentacion {
             img {
@@ -169,6 +169,15 @@
             grid-column: 1/2;
             grid-row: 6/7;
         }
+        .temario,
+        .objetivo,
+        .requisitos{
+            ul{
+                li{
+                    font-size: 16px;
+                }
+            }
+        }
     }
 
 
@@ -246,7 +255,7 @@
             }
 
             p {
-                font-size: 14px;
+                font-size: 16px;
             }
         }
 
@@ -266,7 +275,10 @@
 @media(max-width:550px) {
     
     .cursos{
-        .cajita{
+        h2{
+            font-size: 30px;
+        }
+        .containerCard{
             width: 80%;
         }
     }
@@ -278,6 +290,7 @@
         .mainBox {
             .text {
                 width: 90%;
+                font-size: 16px;
             }
         }
     }

@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    overflow: hidden;
 
     .text {
         width: 800px;
@@ -16,7 +17,7 @@
         }
 
         p {
-            font-size: 16px;
+            font-size: 18px;
             color: $color-text;
         }
 
