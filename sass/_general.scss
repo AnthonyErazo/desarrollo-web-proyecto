@@ -98,12 +98,13 @@ $color-black:#111;
 
 
 html {
-    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
 }
 
 body {
     overflow-x: hidden;
     background-image: url(../imagenes/fondo.png);
+    scroll-padding-top: 5rem;
 }
 
 .notAvailed {

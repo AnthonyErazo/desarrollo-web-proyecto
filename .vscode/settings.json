@@ -1,3 +1,20 @@
 {
-    "liveServer.settings.port": 5502
+  "liveServer.settings.port": 5502,
+  "files.exclude": {
+    "*.git": true,
+    "*.git.*": true,
+    "*.vscode": true,
+    "*.vscode.*": true,
+    "*estilos": true,
+    "*estilos.*": true,
+    "*imagenes": true,
+    "*imagenes.*": true,
+    "*index": true,
+    "*index.*": true,
+    "*paginas": true,
+    "*paginas.*": true,
+    "*README": true,
+    "*sass": true,
+    "*sass.*": true
+  }
 }
